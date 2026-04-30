@@ -1,22 +1,21 @@
 # Feature: Inline File Viewing for Code Submissions
 
 ## Design
-This feature enables inline viewing of common code files (e.g., `.py`, `.ts`) directly within submission comments on Canvas. Instead of displaying only metadata (filename and size), the system will render the file contents in a readable, syntax-highlighted format.
+
+This feature enables inline viewing of common code files (e.g., `.py`, `.ts`) directly within submission comments on Canvas. Instead of displaying only metadata (filename and size), the system will render the file contents in a readable format.
 
 Key design elements:
 - Detect supported file types by extension
 - Fetch and safely render file contents
-- Apply syntax highlighting for readability
-- Embed the rendered view within the submission comment UI
-- Provide fallback to existing behavior for unsupported file types
+- Embed the rendered view within the submission details UI
+- Fallback to existing behavior for unsupported file types
 
 ## Functional Requirements
 - The system shall recognize supported file types (e.g., `.py`, `.ts`)
 - The system shall display file contents inline within submission comments
+- The system shall use even character spacing like code editors
 - The system shall preserve formatting (indentation, line breaks)
-- The system shall apply syntax highlighting based on file type
-- The system shall allow users to expand/collapse large files
-- The system shall fall back to filename + size display for unsupported files
+- The system shall fall back to existing behavior for unsupported files
 
 ## Non-Functional Requirements
 - Performance: File rendering should not significantly delay comment loading
@@ -29,7 +28,6 @@ Key design elements:
 - Current implementation only surfaces file metadata (name and byte size)
 - File storage/retrieval APIs already exist and can be reused
 - Comment rendering pipeline can be extended to include file previews
-- No existing syntax-highlighting utility integrated (may require adding a library)
 - Potential need to modify frontend components responsible for comment display
 
 ## Testing Plan
@@ -55,3 +53,7 @@ Key design elements:
 - Security Tests:
   - Ensure no executable scripts run in rendered output
   - Validate proper escaping of HTML/JS content
+
+## Agent
+
+Use the [Analyze Repo Agent](.gemini/agents/analyze-repo.agent.md) to get general repository information
