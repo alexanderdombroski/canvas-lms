@@ -261,6 +261,13 @@
               <a href="<%= preview_url %>" class="<%= attachment.mime_class %> file-upload-submission-info__link">
                 <%= attachment.display_name %>
               </a>
+              <%
+                code_extensions = %w[.js .py .rb .java .ts .c .cpp .html .css .json .sh .go .php .rs]
+                ext = File.extname(attachment.display_name).downcase
+              %>
+              <% if code_extensions.include?(ext) %>
+                <pre style="max-height: 250px; margin-top: 10px; overflow: auto; background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 10px; border-radius: 4px; font-size: 0.9em;"><%= h(attachment.open.read) %></pre>
+              <% end %>
               <span class="file-upload-submission-info__filesize"><%= number_to_human_size(attachment.size) %></span>
             </td>
             <td class="file-upload-submission-turnitin">

@@ -1347,6 +1347,8 @@ class Attachment < ApplicationRecord
     # NOTE: keep this list in sync with what's in packages/canvas-rce/src/common/mimeClass.js
     {
       "text/html" => "html",
+      "text/x-python" => "code",
+      "application/x-typescript" => "code",
       "text/x-csharp" => "code",
       "text/xml" => "code",
       "text/css" => "code",
