@@ -40,9 +40,35 @@ export const previewableMimeTypes = [
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   'application/postscript',
   'application/pdf',
-  'application/vnd.ms-powerpoint',
+  'application/javascript',
+  'text/javascript',
+  'application/typescript',
+  'text/x-python',
+  'text/x-c',
+  'text/x-c++src',
+  'text/x-chdr',
+  'text/x-c++hdr',
+  'text/x-java-source',
+  'text/x-csharp',
+  'text/x-go',
+  'text/x-rustsrc',
+  'application/x-ruby',
+  'application/x-httpd-php',
+  'text/x-swift',
+  'text/x-kotlin',
+  'text/x-scala',
+  'application/x-sh',
+  'text/x-script.zsh',
+  'text/html',
+  'text/css',
+  'application/json',
+  'application/xml',
+  'application/x-yaml',
+  'application/sql',
+  'text/markdown',
 ]
 
 export function isPreviewable(type) {
+  console.log('COMPILED')
   return previewableMimeTypes.includes(type)
 }
