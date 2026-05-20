@@ -8,7 +8,7 @@ Implement the feature as described in agents/tasks/feature-1/feature-1.md
 
 # MCP: move to In progress (when, which tool, idempotency)
 
-Use the gh cli to interact with this [github project](https://github.com/users/alexanderdombroski/projects/2)
+Use the gh cli to interact with this [github project](https://github.com/users/alexanderdombroski/projects/2). Also add progress in agents/tasks/feature-1/implementation-evidence.md
 
 # Guardrails and failure modes
 
