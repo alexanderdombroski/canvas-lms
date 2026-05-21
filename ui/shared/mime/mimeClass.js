@@ -54,6 +54,8 @@ const mimeClasses = {
       'application/xml',
       'application/javascript',
       'text/x-csharp',
+      'text/x-python',
+      'application/x-typescript',
     ],
   },
   doc: {
