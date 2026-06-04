@@ -198,6 +198,25 @@ body.is-inside-submission-frame {
   white-space: nowrap;
 }
 
+.file-upload-submission-code-preview {
+  margin-top: $ic-sp * 0.5;
+  max-height: 16rem;
+  overflow: auto;
+  padding: $ic-sp * 0.75;
+  border: 1px solid $ic-border-color;
+  border-radius: $ic-border-radius;
+  background: $ic-bg-light-neutral;
+  color: $ic-color-dark;
+  font-family: $ic-font-family-monospace;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 2;
+  -moz-tab-size: 2;
+}
+
 .file-upload-submission-attachment {
   @include fontSize(13px);
   text-align: direction(right);
